@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HW 29</title>
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- <input type="button" class="btn btn-primary" value="Add Driver" /> -->
+      <header class="header">
+        <h1>Driver Information List</h1>
+        <input 
+        type="button"
+        id="addbutton" 
+        value="Add Driver"  
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#FormModal"
+        data-bs-whatever="@mdo">
+
+
+        <div class="modal fade" id="FormModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5">New Driver Form</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <form name="form">
+                          <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">Name:</label>
+                            <input type="text" name="name" class="form-control" id="recipient-name" >
+                          </div>
+                          <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">Surname:</label>
+                            <input type="text" name="surname" class="form-control" id="recipient-name">
+                          </div>
+                          <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">Age:</label>
+                            <input type="text" name="age" class="form-control" id="recipient-name">
+                          </div>
+                          <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">Car Brand:</label>
+                            <input type="text" name="brand" class="form-control" id="recipient-name">
+                          </div>
+                          <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">Car Model:</label>
+                            <input type="text" name="model" class="form-control" id="recipient-name">
+                          </div>
+                          <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">Car Year:</label>
+                            <input type="text" name="year" class="form-control" id="recipient-name">
+                          </div>         
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <input id="form-close" type="button" class="btn btn-secondary" data-bs-dismiss="modal" value="Close">
+                        <!-- <input id="submit" type="button" class="btn btn-primary"  value="Submit"> -->
+                        <button id="submit" type="button" class="btn btn-primary">Submit</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+      </header>
+
+     
+      <section class="list">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">ID</th>
+              <th scope="col">Name</th>
+              <th scope="col">Surname</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody class="tbody">
+            <!-- <tr data-id="">
+              <th scope="row">1</th>
+              <td>758367</td>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>
+                <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#DetailsModal">Driver Info</button>
+                <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#DetailsModal">Car Info</button>
+              </td>              
+            </tr>             -->
+          </tbody>
+        </table>
+
+        <!-- Modal -->
+        <div class="modal fade" id="DetailsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="ModalDeteilsTitle">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body" id="ModalDeteilsBody">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+              </div>
+            </div>
+          </div>
+        </div>    
+        
+      </section>
+    </div>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/entity.js"></script>
+    <script src="./js/functions.js"></script>
+    <script src="./js/myapp.js"></script>
+  </body>
+</html>
